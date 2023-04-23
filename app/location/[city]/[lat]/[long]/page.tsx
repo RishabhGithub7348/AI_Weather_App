@@ -37,7 +37,7 @@ async function WeatherPage({params: {city, lat, long}}: Props) {
 
   const result: Root = data.myQuery;
   const dataToSend = cleanData(result, city);
-  console.log(dataToSend);
+ 
 
   const res = await fetch(`${getBasePath()}/api/getWeatherSummary`, {
     method: 'POST',
