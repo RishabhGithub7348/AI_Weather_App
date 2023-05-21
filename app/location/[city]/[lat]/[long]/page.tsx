@@ -39,7 +39,7 @@ async function WeatherPage({params: {city, lat, long}}: Props) {
   const dataToSend = cleanData(result, city);
  
 
-  const res = await fetch(`${getBasePath()}/api/getWeatherSummary`, {
+  const res = await fetch(`https://ai-weather-app.vercel.app/api/getWeatherSummary`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
